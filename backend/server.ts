@@ -20,5 +20,9 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
 });
 
+app.get('/weather/:loc', (req : Request, res : Response) => {
+    res.send(`location: ${req.params.loc}`);
+})
+
 app.listen(3000);
 
